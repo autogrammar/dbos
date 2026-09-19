@@ -17,7 +17,7 @@
 services:
 
   postgres:
-    image: postgres:16-alpine
+    image: postgres:16-alpine@sha256:18cfe3ef5e6815560c98237d6216d1e5119702fb0f3894c8785dd58b8bbe5d73
     container_name: platform-postgres
     restart: unless-stopped
     environment:
@@ -157,7 +157,7 @@ services:
     networks: [platform]
 
   nginx-cdn:
-    image: nginx:alpine
+    image: nginx:alpine@sha256:83075afea33660ca1911ce1905dee384079ed856397e0e5a9249435b22c35dc8
     container_name: platform-cdn
     restart: unless-stopped
     ports: ["${CDN_PORT:-8080}:80"]
