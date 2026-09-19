@@ -1,4 +1,4 @@
-FROM php:8.3-cli-alpine
+FROM php:8.3-cli-alpine@sha256:c8480c242f2145f7b7df3f2adb743a46aa7d9da0b1cbe533def3afc0509a0c31
 
 # pdo_pgsql for Postgres access
 RUN apk add --no-cache postgresql-dev git unzip \
